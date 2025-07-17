@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>활력 손 체조 - AI 코치</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: 가독성 좋은 폰트 적용 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <!-- 좌측: 비디오 및 캔버스 영역 -->
+        <div class="viewport">
+            <video id="webcam" autoplay playsinline></video>
+            <canvas id="outputCanvas"></canvas>
+            <div id="loading">
+                <p>AI 코치를 불러오는 중입니다...</p>
+                <div class="spinner"></div>
+            </div>
+        </div>
+
+        <!-- 우측: 운동 안내 및 상태 패널 -->
+        <div class="exercise-panel">
+            <h1>AI 손 체조 코치</h1>
+            <p class="description">잠시 후 카메라가 켜지면 손을 보여주세요. AI 코치가 운동을 안내합니다.</p>
+            
+            <div class="status-box">
+                <h2>현재 운동</h2>
+                <p id="instruction">준비 중...</p>
+            </div>
+
+            <div class="status-box">
+                <h2>진행 상태</h2>
+                <p id="status">-</p>
+            </div>
+            
+            <button id="stopButton" style="display: none;">체조 중지하기</button>
+        </div>
+    </div>
+
+    <!-- ★★★ MediaPipe 라이브러리 로딩 주소 변경 ★★★ -->
+    <!-- 메인 로직 스크립트 -->
+    <script type="module" src="./script.js"></script>
+
+</body>
+</html>
