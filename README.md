@@ -18,7 +18,7 @@
 
   * **프론트엔드**: `HTML`, `CSS`, `JavaScript (ES Modules)`
   * **머신러닝**: **Google MediaPipe** (Hand Landmarker)
-  * **개발 환경**: **Vite**
+  * **개발 환경**: **cursor**
   * **배포**: **Render**
 
 -----
